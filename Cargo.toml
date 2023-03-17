@@ -1,0 +1,7 @@
+[package]
+name = "DS-A"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ezra Dyck <ezra.w.dyck@gmail.com>"]
+
+[dependencies]
