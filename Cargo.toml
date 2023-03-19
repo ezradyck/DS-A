@@ -1,7 +1,8 @@
 [package]
-name = "DS-A"
+name = "ds_a"
 version = "0.1.0"
 edition = "2021"
-authors = ["Ezra Dyck <ezra.w.dyck@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
