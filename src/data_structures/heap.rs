@@ -32,19 +32,19 @@ where
         self.items.push(item);
 
         // next heapify the element up the array until it reaches the desired spot
+        self.heapify_up();
+    }
 
-        // start at the end of the array minus 1
-        // get parent index
-        // if parent index exists
-        //  compare value of parent with value of item
-        //  if child is greater than parent swap places
-        //  else child is in proper place : algorithm complete
-        // else item is now root node : algorithm complete
+    fn heapify_up(&mut self) {
         let mut idx = self.count;
         while self.parent_idx(idx) > 0 {
             let pdx = self.parent_idx(idx);
             if (self.comparator)(&self.items[idx], &self.items[pdx]) {
                 self.items.swap(idx, pdx);
+            } else {
+                // if the current index should not be swapped with th parent then there is no
+                // reason to keep traversing up the heap
+                break;
             }
             idx = pdx;
         }
